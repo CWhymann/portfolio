@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Verlauf wie im Portfolio: Von Schwarz zu Tief-Grün/Teal -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#008080;stop-opacity:1" /> 
+      <!-- Hinweis: Das Teal im Bild ist ein dunkles Blaugrün. Du kannst den Hex-Wert #008080 anpassen, z.B. zu #004d4d für dunkleres Teal -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Hintergrund mit Verlauf und abgerundeten Ecken -->
+  <rect width="100" height="100" rx="20" fill="url(#bg-gradient)"/>
+  
+  <!-- Initialen: Weiß, Fett, Zentriert -->
+  <text 
+    x="50%" 
+    y="50%" 
+    dominant-baseline="central" 
+    text-anchor="middle" 
+    font-family="Arial, Helvetica, sans-serif" 
+    font-weight="900" 
+    font-size="60" 
+    fill="#FFFFFF">
+    CW
+  </text>
+</svg>   

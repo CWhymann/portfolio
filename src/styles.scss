@@ -1,8 +1,9 @@
 @use 'styles/abstracts/variables' as *;
 @use 'styles/abstracts/mixins' as *;
-@use 'styles/base/reset';
-@use 'styles/base/typography';
-@use 'styles/layout/header';
-@use 'styles/layout/footer';
+@use 'styles/base/reset' as *;
+@use 'styles/base/typography' as *;
+@use 'styles/layout/header' as *;
+@use 'styles/layout/footer' as *;
+@use 'styles/components/buttons' as *;
 
 /* You can add global styles to this file, and also import other style files */

@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 h1 {
   font-size: $font-size-xxl;
   font-weight: $font-weight-bold;
