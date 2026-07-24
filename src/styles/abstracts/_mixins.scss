@@ -1,0 +1,48 @@
+// Breakpoints
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Typography
+@mixin font-size($size) {
+  font-size: $size;
+  line-height: 1.5;
+}
+
+// Transitions
+@mixin transition($property: all) {
+  transition: $property $transition-base;
+}

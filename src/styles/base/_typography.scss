@@ -1,0 +1,36 @@
+h1 {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: 1.3;
+}
+
+p {
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: 1.6;
+}
+
+small {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+}
+
+.text-accent {
+  color: $color-accent;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}

@@ -1,0 +1,40 @@
+// Colors
+$color-primary: #1a1a2e;
+$color-secondary: #16213e;
+$color-accent: #0f9b8e;
+$color-accent-light: #14c5b2;
+$color-white: #ffffff;
+$color-text: #e0e0e0;
+$color-text-muted: #a0a0a0;
+
+// Typography
+$font-family-base: 'Inter', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 32px;
+$font-size-xxl: 56px;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 48px;
+$spacing-xl: 80px;
+$spacing-xxl: 120px;
+
+// Breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+// Layout
+$max-width: 1440px;
+
+// Transitions
+$transition-fast: 75ms ease;
+$transition-base: 125ms ease;
