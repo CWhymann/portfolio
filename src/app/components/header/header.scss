@@ -1,0 +1,122 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-sm $spacing-md;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__link {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-white;
+    letter-spacing: -0.03em;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2px;
+    margin-right: $spacing-sm;
+  }
+
+  &__lang-btn {
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &--active {
+      background: $color-accent;
+      color: $color-white;
+    }
+  }
+
+  &__logo {
+    @include flex-center;
+    gap: $spacing-xs;
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &-text {
+      font-family: $font-family-heading;
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-accent;
+      text-align: right;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $color-white;
+      border-radius: 2px;
+      transition: all $transition-base;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
+    background: rgba(0, 0, 0, 0.9);
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  @include mobile {
+    &__left {
+      display: none;
+    }
+
+    &__hamburger {
+      display: flex;
+    }
+  }
+}

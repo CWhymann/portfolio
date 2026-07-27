@@ -1,0 +1,35 @@
+<header class="header">
+  <nav class="header__nav">
+    <div class="header__left">
+      <div class="header__lang">
+        <button class="header__lang-btn header__lang-btn--active">EN</button>
+        <button class="header__lang-btn">DE</button>
+      </div>
+      <a class="header__link" href="#about">About me</a>
+      <a class="header__link" href="#skills">Skills</a>
+      <a class="header__link" href="#projects">Projects</a>
+    </div>
+
+    <div class="header__logo">
+      <img class="header__logo-icon" src="favicon.svg" alt="Logo" />
+      <span class="header__logo-text">Christian<br />Wiemann</span>
+    </div>
+
+    <button
+      class="header__hamburger"
+      (click)="toggleMenu()"
+      [attr.aria-label]="isMenuOpen() ? 'Menü schließen' : 'Menü öffnen'"
+      [attr.aria-expanded]="isMenuOpen()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="header__mobile-menu" [class.header__mobile-menu--open]="isMenuOpen()">
+    <a class="header__link" href="#about" (click)="toggleMenu()">About me</a>
+    <a class="header__link" href="#skills" (click)="toggleMenu()">Skills</a>
+    <a class="header__link" href="#projects" (click)="toggleMenu()">Projects</a>
+  </div>
+</header>

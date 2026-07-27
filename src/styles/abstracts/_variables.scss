@@ -1,11 +1,15 @@
 // Colors
-$color-primary: #1a1a2e;
-$color-secondary: #16213e;
+$color-primary: #1C1C1C;
+$color-secondary: #08463B;
 $color-accent: #0f9b8e;
 $color-accent-light: #14c5b2;
 $color-white: #ffffff;
 $color-text: #e0e0e0;
 $color-text-muted: #a0a0a0;
+
+// Gradients
+$gradient-hero: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+$gradient-header: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
 
 // Typography
 $font-family-base: 'Fira Code', monospace;
