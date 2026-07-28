@@ -1,0 +1,156 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.about {
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $spacing-md;
+  background: $color-primary;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: $spacing-xl;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    isolation: isolate;
+    width: 568px;
+    height: 568px;
+  }
+
+  &__image {
+    width: 568px;
+    height: 568px;
+    object-fit: cover;
+    border-radius: 24px;
+    filter: grayscale(100%);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__decoration {
+    position: absolute;
+    top: 24px;
+    left: -24px;
+    bottom: -24px;
+    right: 24px;
+    border-radius: 24px;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      $color-accent,
+      $color-accent 2px,
+      transparent 2px,
+      transparent 24px
+    );
+    opacity: 0;
+    transition: opacity $transition-base;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__image-wrapper:hover &__decoration {
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding-top: 160px;
+  }
+
+  &__label {
+    font-family: $font-family-heading;
+    font-weight: 500;
+    font-size: 24px;
+    color: #3dcfb6;
+    line-height: 1;
+  }
+
+  &__box {
+    background: $color-secondary;
+    border-radius: 32px;
+    padding: 32px;
+    width: 568px;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    border: 1px solid $color-accent;
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 56px;
+    color: #3dcfb6;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__text {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.2;
+    text-align: justify;
+  }
+
+  &__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-sm;
+
+    img {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    span {
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      color: $color-text;
+      line-height: 1.6;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__image-wrapper {
+      width: 100%;
+      height: auto;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+
+    &__content {
+      padding-top: 0;
+    }
+
+    &__box {
+      width: 100%;
+    }
+  }
+}
