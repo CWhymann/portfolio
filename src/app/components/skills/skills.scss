@@ -1,0 +1,147 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.skills {
+  height: 695px;
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-md;
+  background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59, 0.3) 0%, #1c1c1c 100%);
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-xl;
+    max-width: $max-width;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-accent;
+  }
+
+  &__box {
+    border: 1px solid $color-accent;
+    border-radius: 30px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    width: 500px;
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 56px;
+    color: $color-accent;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__text {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  &__cta-label {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-white;
+    font-weight: 700;
+  }
+
+  &__cta-highlight {
+    font-family: $font-family-base;
+    color: $color-accent;
+    font-weight: 400;
+  }
+
+  &__cta-text {
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-white;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-white;
+    width: fit-content;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 72px;
+    width: 632px;
+    height: 428px;
+    flex-shrink: 0;
+  }
+
+  &__icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      width: 104px;
+      height: 116px;
+      object-fit: contain;
+    }
+
+    span {
+      font-family: $font-family-base;
+      font-size: $font-size-sm;
+      color: $color-white;
+      text-align: center;
+    }
+  }
+
+  @include mobile {
+    height: auto;
+    padding: $spacing-xl $spacing-md;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__box {
+      width: 100%;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+    }
+  }
+}
