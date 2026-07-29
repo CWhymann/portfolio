@@ -1,0 +1,49 @@
+<section class="projects" id="projects">
+  <div class="projects__container">
+    <div class="projects__left">
+      <span class="projects__label">Portfolio</span>
+      <h2 class="projects__title">Featured Projects</h2>
+      <p class="projects__text">
+        Explore a selection of my work here - Interact with projects to see my skills in action.
+      </p>
+
+      <div class="projects__list">
+        @for (project of projects; track project.title; let i = $index) {
+          <div
+            class="projects__item"
+            [class.projects__item--active]="hoveredProject() === project"
+            (mouseenter)="setHovered(project)"
+            (mouseleave)="clearHovered()"
+          >
+            <span class="projects__item-title">
+              {{ project.title }}
+              @if (hoveredProject() === project) {
+                ↗
+              }
+            </span>
+            <span class="projects__item-tags">
+              @for (tech of project.techStack; track tech; let last = $last) {
+                {{ tech }}{{ !last ? ' | ' : '' }}
+              }
+            </span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="projects__preview-wrapper">
+      @for (project of projects; track project.title; let i = $index) {
+        @if (hoveredProject() === project) {
+          <div class="projects__preview" [class]="'projects__preview--' + i">
+            <img
+              class="projects__preview-image"
+              [src]="project.previewImage"
+              [alt]="project.title"
+            />
+            <div class="projects__preview-decoration"></div>
+          </div>
+        }
+      }
+    </div>
+  </div>
+</section>
