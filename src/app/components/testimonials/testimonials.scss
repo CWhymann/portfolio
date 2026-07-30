@@ -1,0 +1,143 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.testimonials {
+  padding: $spacing-xl 0;
+  background: $color-primary;
+
+  &__title {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: 32px;
+    color: #3dcfb6;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__slider {
+    position: relative;
+    width: 1440px;
+    height: 274px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &__fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #1c1c1c 0%,
+      rgba(28, 28, 28, 0) 10%,
+      rgba(28, 28, 28, 0) 90%,
+      #1c1c1c 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__card {
+    position: absolute;
+    width: 560px;
+    height: 274px;
+    border-radius: 30px;
+    padding: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+    background: $color-secondary;
+    border: 1px solid transparent;
+
+    &--active {
+      left: 50%;
+      transform: translateX(-50%);
+      background: $color-secondary;
+      border-color: #3dcfb6;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    &--prev {
+      left: calc(50% - 560px - 40px);
+      transform: translateX(-50%);
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    &--next {
+      left: calc(50% + 560px + 40px);
+      transform: translateX(-50%);
+      opacity: 0.5;
+      z-index: 0;
+    }
+  }
+
+  &__card-text {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.6;
+  }
+
+  &__card-footer {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__card-line {
+    flex: 1;
+    height: 1px;
+    background: $color-text-muted;
+  }
+
+  &__card-author {
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    color: $color-text;
+    white-space: nowrap;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: $spacing-lg;
+    width: 184px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__arrow {
+    font-size: 28px;
+    color: $color-white;
+    cursor: pointer;
+    transition: color $transition-base;
+
+    &:hover {
+      color: #3dcfb6;
+    }
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $color-white;
+    cursor: pointer;
+    transition: background $transition-base;
+
+    &--active {
+      background: #3dcfb6;
+    }
+  }
+}

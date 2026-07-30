@@ -1,0 +1,48 @@
+<section class="testimonials">
+  <h2 class="testimonials__title">What my colleagues say about me</h2>
+
+  <div class="testimonials__slider">
+    <div class="testimonials__fade"></div>
+
+    <div class="testimonials__track">
+      @for (testimonial of testimonials; track testimonial.author; let i = $index) {
+        <div
+          class="testimonials__card"
+          [class]="'testimonials__card--' + getPosition(i)"
+          (click)="onCardClick(i)"
+        >
+          @if (getPosition(i) === 'active') {
+            <p class="testimonials__card-text">{{ testimonials[displayIndex()].text }}</p>
+            <div class="testimonials__card-footer">
+              <span class="testimonials__card-line"></span>
+              <span class="testimonials__card-author"
+                >{{ testimonials[displayIndex()].author }} -
+                {{ testimonials[displayIndex()].role }}</span
+              >
+            </div>
+          } @else {
+            <p class="testimonials__card-text">{{ testimonial.text }}</p>
+            <div class="testimonials__card-footer">
+              <span class="testimonials__card-line"></span>
+              <span class="testimonials__card-author"
+                >{{ testimonial.author }} - {{ testimonial.role }}</span
+              >
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="testimonials__nav">
+    <button class="testimonials__arrow" (click)="prev()">←</button>
+    @for (testimonial of testimonials; track testimonial.author; let i = $index) {
+      <button
+        class="testimonials__dot"
+        [class.testimonials__dot--active]="displayIndex() === i"
+        (click)="setActive(i)"
+      ></button>
+    }
+    <button class="testimonials__arrow" (click)="next()">→</button>
+  </div>
+</section>
