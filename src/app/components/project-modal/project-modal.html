@@ -1,1 +1,31 @@
-<p>project-modal works!</p>
+<div class="modal-overlay" (click)="onClose()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button class="modal__close" (click)="onClose()">✕</button>
+
+    <div class="modal__left">
+      <span class="modal__number">{{ project().number }}</span>
+      <h2 class="modal__title">{{ project().title }}</h2>
+      <h3 class="modal__subtitle">What is this project about?</h3>
+      <p class="modal__description">{{ project().description }}</p>
+
+      <div class="modal__tech">
+        @for (tech of project().techStack; track tech) {
+          <div class="modal__tech-item">
+            <span>{{ tech }}</span>
+          </div>
+        }
+      </div>
+
+      <div class="modal__buttons">
+        <a class="modal__btn" [href]="project().githubUrl" target="_blank">GitHub ↗</a>
+        <a class="modal__btn" [href]="project().liveUrl" target="_blank">Live Test ↗</a>
+      </div>
+    </div>
+
+    <div class="modal__right">
+      <img class="modal__image" [src]="project().previewImage" [alt]="project().title" />
+    </div>
+
+    <button class="modal__next" (click)="onNext()">Next project →</button>
+  </div>
+</div>

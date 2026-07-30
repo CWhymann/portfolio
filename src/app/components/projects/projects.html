@@ -14,6 +14,7 @@
             [class.projects__item--active]="hoveredProject() === project"
             (mouseenter)="setHovered(project)"
             (mouseleave)="clearHovered()"
+            (click)="openModal(project)"
           >
             <span class="projects__item-title">
               {{ project.title }}
@@ -47,3 +48,7 @@
     </div>
   </div>
 </section>
+
+@if (activeProject()) {
+  <app-project-modal [project]="activeProject()!" (closed)="closeModal()" (next)="nextProject()" />
+}

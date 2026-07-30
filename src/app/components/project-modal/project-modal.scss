@@ -1,0 +1,148 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  @include flex-center;
+}
+
+.modal {
+  position: relative;
+  width: 1248px;
+  height: 656px;
+  border-radius: 30px;
+  border: 1px solid #3dcfb6;
+  background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    font-size: 20px;
+    color: $color-white;
+    cursor: pointer;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__left {
+    position: absolute;
+    top: 91px;
+    left: 80px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__number {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 80px;
+    color: $color-accent;
+    line-height: 1;
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 48px;
+    color: $color-white;
+    line-height: 1;
+    margin-top: -24px;
+  }
+
+  &__subtitle {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-accent;
+  }
+
+  &__description {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.6;
+  }
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  &__tech-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    span {
+      font-family: $font-family-base;
+      font-size: $font-size-sm;
+      color: $color-white;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-white;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-white;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    top: 143px;
+    left: 648px;
+    width: 520px;
+    height: 370px;
+  }
+
+  &__image {
+    width: 520px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  &__next {
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-accent;
+    cursor: pointer;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-accent-light;
+    }
+  }
+}

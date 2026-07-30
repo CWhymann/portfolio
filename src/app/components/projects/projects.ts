@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
+import { ProjectModal } from '../project-modal/project-modal';
 
-interface Project {
+export interface Project {
   number: string;
   title: string;
   techStack: string[];
@@ -12,7 +13,7 @@ interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ProjectModal],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
@@ -21,35 +22,37 @@ export class Projects {
     {
       number: '01',
       title: 'Join',
-      techStack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      githubUrl: 'https://github.com/DEIN-USERNAME/join',
+      techStack: ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript'],
+      githubUrl: 'https://github.com/CWhymann/join',
       liveUrl: 'https://example.com/join',
-      previewImage: '/img/join-preview.png',
+      previewImage: 'img/join-preview.png',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     },
     {
       number: '02',
       title: 'El Pollo Loco',
-      techStack: ['HTML', 'CSS', 'JavaScript'],
-      githubUrl: 'https://github.com/DEIN-USERNAME/el-pollo-loco',
+      techStack: ['JavaScript', 'HTML', 'CSS'],
+      githubUrl: 'https://github.com/CWhymann/el-pollo-loco',
       liveUrl: 'https://example.com/el-pollo-loco',
-      previewImage: '/img/el-pollo-loco-preview.png',
-      description: 'Jump, run and throw game based on object-oriented approach.',
+      previewImage: 'img/el-pollo-loco-preview.png',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     },
     {
       number: '03',
       title: 'DA Bubble',
       techStack: ['Angular', 'Firebase', 'TypeScript'],
-      githubUrl: 'https://github.com/DEIN-USERNAME/da-bubble',
+      githubUrl: 'https://github.com/CWhymann/da-bubble',
       liveUrl: 'https://example.com/da-bubble',
-      previewImage: '/img/da-bubble-preview.png',
+      previewImage: 'img/da-bubble-preview.png',
       description:
-        'This App is a Slack Clone App. It revolutionizes team communication and collaboration.',
+        'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
     },
   ];
 
   hoveredProject = signal<Project | null>(null);
+  activeProject = signal<Project | null>(null);
 
   setHovered(project: Project): void {
     this.hoveredProject.set(project);
@@ -62,5 +65,21 @@ export class Projects {
   hoveredIndex(): number {
     const project = this.hoveredProject();
     return project ? this.projects.indexOf(project) : 0;
+  }
+
+  openModal(project: Project): void {
+    this.activeProject.set(project);
+  }
+
+  closeModal(): void {
+    this.activeProject.set(null);
+  }
+
+  nextProject(): void {
+    const current = this.activeProject();
+    if (!current) return;
+    const index = this.projects.indexOf(current);
+    const next = this.projects[(index + 1) % this.projects.length];
+    this.activeProject.set(next);
   }
 }
