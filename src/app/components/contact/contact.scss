@@ -1,0 +1,215 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.contact {
+  padding: $spacing-xxl $spacing-md;
+  background: $color-primary;
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-xl;
+    max-width: 1248px;
+    margin: 0 auto;
+  }
+
+  &__left {
+    width: 568px;
+    height: 337px;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__label {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: $font-size-base;
+    color: $color-accent;
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 80px;
+    color: $color-accent;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-accent;
+  }
+
+  &__text {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.6;
+  }
+
+  &__cta {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+  }
+
+  &__cta-link {
+    color: $color-accent;
+    text-decoration: underline;
+  }
+
+  &__form {
+    width: 616px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-top: 1px solid #3dcfb6;
+    padding-top: $spacing-md;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__field-label {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: $font-size-base;
+    color: $color-accent;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $color-accent;
+    color: $color-text;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    padding: $spacing-xs 0;
+    width: 100%;
+
+    &::placeholder {
+      color: $color-text-muted;
+    }
+
+    &--textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    &--error {
+      border-bottom-color: #ff4444;
+    }
+  }
+
+  &__error {
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    color: #ff4444;
+  }
+
+  &__privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-sm;
+  }
+
+  &__checkbox {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: $color-accent;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  &__privacy-label {
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    color: $color-text;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  &__privacy-link {
+    color: $color-accent;
+    font-family: $font-family-base;
+  }
+
+  &__success {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-accent;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-white;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-white;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  &__to-top {
+    position: absolute;
+    bottom: $spacing-lg;
+    right: $spacing-lg;
+    width: 48px;
+    height: 48px;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    @include flex-center;
+    font-size: 20px;
+    color: $color-white;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__form {
+      width: 100%;
+    }
+  }
+}
