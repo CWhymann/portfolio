@@ -1,0 +1,47 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.legal-notice {
+  background: $gradient-hero;
+  padding: 160px $spacing-md $spacing-xxl;
+
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: $font-size-xxl;
+    color: $color-accent;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__heading {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: $font-size-lg;
+    color: $color-white;
+    margin: $spacing-lg 0 $spacing-xs;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: $spacing-md;
+
+    li {
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      color: $color-accent;
+      line-height: 1.6;
+    }
+  }
+
+  &__text {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-accent;
+    line-height: 1.6;
+  }
+}
