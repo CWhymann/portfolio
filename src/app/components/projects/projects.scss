@@ -139,12 +139,33 @@ $item-height: 88px;
     padding: $spacing-xl $spacing-md;
 
     &__container {
-      flex-direction: column;
-      padding: 0 $spacing-md;
-    }
+        display: flex;
+        flex-direction: column;
+        padding: 0 $spacing-md;
+      }
 
     &__left {
       width: 100%;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__list {
+      width: 100%;
+    }
+
+    &__item-title {
+      font-size: 18px;
+    }
+
+    &__item-tags {
+      font-size: 12px;
     }
 
     &__preview-wrapper {

@@ -131,8 +131,11 @@
   }
 
   @include mobile {
+    height: auto;
+    padding: $spacing-xl $spacing-md;
+
     &__container {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
 
     &__image-wrapper {
@@ -149,8 +152,18 @@
       padding-top: 0;
     }
 
+    &__label {
+      font-size: 18px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
     &__box {
       width: 100%;
+      min-height: auto;
+      padding: $spacing-md;
     }
   }
 }

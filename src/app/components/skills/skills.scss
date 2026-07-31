@@ -135,6 +135,14 @@
       flex-direction: column;
     }
 
+    &__label {
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
     &__box {
       width: 100%;
     }
@@ -142,6 +150,13 @@
     &__grid {
       grid-template-columns: repeat(3, 1fr);
       width: 100%;
+      height: auto;
+      gap: $spacing-md;
+    }
+
+    &__icon-item img {
+      width: 64px;
+      height: 72px;
     }
   }
 }

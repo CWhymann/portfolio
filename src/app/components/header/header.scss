@@ -100,12 +100,22 @@
   &__mobile-menu {
     display: none;
     flex-direction: column;
-    gap: $spacing-sm;
-    padding: $spacing-sm $spacing-md;
-    background: rgba(0, 0, 0, 0.9);
+    gap: $spacing-md;
+    position: absolute;
+    top: 70px;
+    right: $spacing-md;
+    width: 200px;
+    padding: $spacing-md;
+    border-radius: 24px;
+    background: $gradient-header;
+    border: 1px solid $color-accent;
 
     &--open {
       display: flex;
+    }
+
+    .header__link {
+      text-align: center;
     }
   }
 

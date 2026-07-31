@@ -135,6 +135,10 @@
     flex: 1;
   }
 
+  &__social-mail-icon {
+    display: none;
+  }
+
   &__socials-icons img {
     width: 24px;
     height: 24px;
@@ -160,8 +164,8 @@
     overflow: hidden;
     padding: $spacing-xs 0;
     display: flex;
-    background: #FFFFFF1F;
-backdrop-filter: blur(5.3px);
+    background: #ffffff1f;
+    backdrop-filter: blur(5.3px);
   }
 
   &__marquee-track {
@@ -170,7 +174,7 @@ backdrop-filter: blur(5.3px);
     gap: 56px;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
-  
+
     span {
       color: $color-accent;
       font-family: $font-family-heading;
@@ -179,15 +183,77 @@ backdrop-filter: blur(5.3px);
       line-height: 120%;
       letter-spacing: 0%;
     }
-  
+
     &-item {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-  
+
     &-dot {
       opacity: 0.6;
+    }
+  }
+  @include mobile {
+    height: 844px;
+
+    &__role {
+      font-size: 22px;
+    }
+
+    &__name {
+      font-size: 56px;
+      white-space: normal;
+    }
+
+    &__cta {
+      flex-direction: row;
+    }
+
+    &__btn {
+      font-size: 16px;
+      padding: $spacing-xs $spacing-sm;
+      white-space: nowrap;
+    }
+    &__scroll {
+      top: calc(55% + 100px);
+    }
+
+    &__socials {
+      top: calc(55% + 180px);
+      gap: $spacing-xs;
+    }
+
+    &__social-mail-icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+
+    &__socials-icons {
+      gap: $spacing-xs;
+    }
+
+    &__socials-icons img {
+      margin-bottom: 0;
+    }
+
+    &__social-mail-wrap {
+      position: static;
+      margin-bottom: 0;
+    }
+
+    &__social-mail-text {
+      display: none;
+    }
+
+    &__marquee {
+      width: calc(100% + 80px);
+    }
+
+    &__marquee-track span {
+      font-size: 18px;
     }
   }
 }
