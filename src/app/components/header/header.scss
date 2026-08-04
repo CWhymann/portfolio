@@ -126,6 +126,15 @@
 
     &__hamburger {
       display: flex;
+      flex-shrink: 0;
+    }
+
+    &__mobile-menu {
+      right: $spacing-sm;
+    }
+
+    &__logo-text {
+      font-size: 18px;
     }
   }
 }

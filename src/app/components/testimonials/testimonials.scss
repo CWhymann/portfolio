@@ -140,4 +140,41 @@
       background: #3dcfb6;
     }
   }
+
+  @include mobile {
+    padding: $spacing-xl $spacing-md;
+  
+    &__title {
+      font-size: 24px;
+      margin-bottom: $spacing-lg;
+    }
+  
+    &__slider {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+      }
+  
+    &__card {
+      width: 280px;
+      height: auto;
+      min-height: 250px;
+      padding: $spacing-md;
+  
+      &--active {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+      &--prev {
+        left: -100%;
+        transform: none;
+      }
+  
+      &--next {
+        left: 200%;
+        transform: none;
+      }
+    }
+  }
 }

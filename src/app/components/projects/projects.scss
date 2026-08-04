@@ -139,10 +139,10 @@ $item-height: 88px;
     padding: $spacing-xl $spacing-md;
 
     &__container {
-        display: flex;
-        flex-direction: column;
-        padding: 0 $spacing-md;
-      }
+      display: flex;
+      flex-direction: column;
+      padding: 0 $spacing-md;
+    }
 
     &__left {
       width: 100%;
@@ -160,6 +160,14 @@ $item-height: 88px;
       width: 100%;
     }
 
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      height: auto;
+      padding: $spacing-sm $spacing-md;
+    }
+
     &__item-title {
       font-size: 18px;
     }
@@ -169,24 +177,7 @@ $item-height: 88px;
     }
 
     &__preview-wrapper {
-      width: 100%;
-      height: auto;
-    }
-
-    &__preview {
-      position: relative;
-      width: 100%;
-
-      &--0,
-      &--1,
-      &--2 {
-        top: 0;
-      }
-    }
-
-    &__preview-image {
-      width: 100%;
-      height: auto;
+      display: none;
     }
   }
 }
