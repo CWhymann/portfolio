@@ -7,28 +7,31 @@
     <div class="testimonials__track">
       @for (testimonial of testimonials; track testimonial.author; let i = $index) {
         <div
-          class="testimonials__card"
-          [class]="'testimonials__card--' + getPosition(i)"
+          class="testimonials__card-wrapper"
+          [class]="'testimonials__card-wrapper--' + getPosition(i)"
           (click)="onCardClick(i)"
         >
-          @if (getPosition(i) === 'active') {
-            <p class="testimonials__card-text">{{ testimonials[displayIndex()].text }}</p>
-            <div class="testimonials__card-footer">
-              <span class="testimonials__card-line"></span>
-              <span class="testimonials__card-author"
-                >{{ testimonials[displayIndex()].author }} -
-                {{ testimonials[displayIndex()].role }}</span
-              >
-            </div>
-          } @else {
-            <p class="testimonials__card-text">{{ testimonial.text }}</p>
-            <div class="testimonials__card-footer">
-              <span class="testimonials__card-line"></span>
-              <span class="testimonials__card-author"
-                >{{ testimonial.author }} - {{ testimonial.role }}</span
-              >
-            </div>
-          }
+          <img class="testimonials__quote" src="icons/quotes.svg" alt="" />
+          <div class="testimonials__card" [class]="'testimonials__card--' + getPosition(i)">
+            @if (getPosition(i) === 'active') {
+              <p class="testimonials__card-text">{{ testimonials[displayIndex()].text }}</p>
+              <div class="testimonials__card-footer">
+                <span class="testimonials__card-line"></span>
+                <span class="testimonials__card-author"
+                  >{{ testimonials[displayIndex()].author }} -
+                  {{ testimonials[displayIndex()].role }}</span
+                >
+              </div>
+            } @else {
+              <p class="testimonials__card-text">{{ testimonial.text }}</p>
+              <div class="testimonials__card-footer">
+                <span class="testimonials__card-line"></span>
+                <span class="testimonials__card-author"
+                  >{{ testimonial.author }} - {{ testimonial.role }}</span
+                >
+              </div>
+            }
+          </div>
         </div>
       }
     </div>

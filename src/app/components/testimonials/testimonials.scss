@@ -18,7 +18,7 @@
   &__slider {
     position: relative;
     width: 1440px;
-    height: 274px;
+    height: 360px;
     overflow: hidden;
     margin: 0 auto;
   }
@@ -43,24 +43,24 @@
     height: 100%;
   }
 
-  &__card {
+  &__quote {
+    display: block;
+    width: 48px;
+    line-height: 0.1;
+    position: relative;
+    top: 24px;
+    left: 32px;
+    z-index: 1;
+  }
+
+  &__card-wrapper {
     position: absolute;
     width: 560px;
-    height: 274px;
-    border-radius: 30px;
-    padding: $spacing-lg;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     transition: all 0.4s ease;
-    background: $color-secondary;
-    border: 1px solid transparent;
 
     &--active {
       left: 50%;
       transform: translateX(-50%);
-      background: $color-secondary;
-      border-color: #3dcfb6;
       z-index: 1;
       opacity: 1;
     }
@@ -77,6 +77,22 @@
       transform: translateX(-50%);
       opacity: 0.5;
       z-index: 0;
+    }
+  }
+
+  &__card {
+    width: 560px;
+    height: 310px;
+    border-radius: 30px;
+    padding: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $color-secondary;
+    border: 1px solid transparent;
+
+    &--active {
+      border-color: #3dcfb6;
     }
   }
 
@@ -143,38 +159,76 @@
 
   @include mobile {
     padding: $spacing-xl $spacing-md;
-  
+
     &__title {
       font-size: 24px;
       margin-bottom: $spacing-lg;
     }
-  
+
     &__slider {
-        width: 100%;
-        height: auto;
-        min-height: 350px;
-      }
-  
-    &__card {
-      width: 280px;
+      width: 100%;
       height: auto;
-      min-height: 250px;
-      padding: $spacing-md;
-  
+      min-height: 460px;
+      overflow: hidden;
+    }
+
+    &__card-wrapper {
+      width: calc(100vw - 40px);
+      max-width: 358px;
+
       &--active {
         left: 50%;
         transform: translateX(-50%);
       }
-  
+
       &--prev {
-        left: -100%;
-        transform: none;
+        left: calc(50% - 100vw);
+        transform: translateX(-50%);
       }
-  
+
       &--next {
-        left: 200%;
-        transform: none;
+        left: calc(50% + 100vw);
+        transform: translateX(-50%);
       }
+    }
+
+    &__card {
+      width: 100%;
+      height: auto;
+      min-height: 320px;
+      border-radius: 32px;
+      padding: 30px;
+      padding-top: 50px;
+    }
+
+    &__quote {
+      top: 26px;
+      left: 10px;
+      width: 50px;
+    }
+
+    &__card-text {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    &__card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-xs;
+      z-index: 1;
+    }
+
+    &__card-line {
+      flex: 1;
+      height: 1px;
+      background: $color-text-muted;
+    }
+
+    &__card-author {
+      white-space: nowrap;
+      font-size: 12px;
     }
   }
 }
