@@ -200,6 +200,8 @@
   }
 
   @include mobile {
+    padding: $spacing-lg $spacing-sm; 
+    
     &__container {
       display: flex;
       flex-direction: column;
@@ -210,46 +212,77 @@
     &__left {
       width: 100%;
       height: auto;
+      gap: 0; // kein pauschaler gap mehr – Abstände unten gezielt gesetzt
+    }
+
+    &__label {
+      margin-bottom: $spacing-sm; // 16px Label -> Titel
+    }
+
+    &__title {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: $spacing-md; // 32px Titel -> "Got a problem" Box
+    }
+
+    &__subtitle {
+      margin-bottom: $spacing-sm; // 16px Subtitle -> Fließtext
+    }
+
+    &__text {
+      margin-bottom: 0;
+    }
+
+    &__cta {
+      margin-top: $spacing-sm; // 16px Text -> CTA-Zeile
+      line-height: 1.4;
     }
 
     &__form {
       width: 100%;
       max-width: 100%;
       gap: 0;
+      margin-top: $spacing-lg; // 40px Abstand Box -> Formular (border-top zählt mit dazu)
     }
 
-    &__title {
-      font-size: 56px;
-      line-height: 1.1;
-    }
-    &__cta {
-      margin-top: 24px;
-      line-height: 1.4;
-    }
     &__field {
       align-items: center;
     }
+
     &__field-label {
       text-align: left;
       width: 100%;
       display: block;
-      padding-top: 32px;
+      padding-top: $spacing-md; // 32px
     }
+
     &__input {
       text-align: left;
       width: 100%;
-      padding-bottom: 32px;
+      padding-bottom: $spacing-md; // 32px
+
+      &--textarea {
+        text-align: left;
+        padding-top: $spacing-sm;
+      }
     }
-    &__textarea {
-      text-align: center;
-      padding: 32px;
-    }
+
     &__privacy {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: $spacing-md; // 32px
+      padding-bottom: $spacing-md; // 32px
     }
+
     &__btn {
       justify-content: center;
     }
+
+    &__submit {
+      justify-content: center;
+    }
+
+    &__to-top {
+        position: static;
+        margin: $spacing-sm auto 0;
+      }
   }
 }
