@@ -68,10 +68,12 @@
   }
 
   &__link {
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
+    font-family: $font-family-heading; // Karla statt Fira Code
+    font-weight: 400;
+    font-size: $font-size-base; // 16px statt $font-size-sm
     color: $color-white;
     transition: color $transition-base;
+    white-space: nowrap;
 
     &:hover {
       color: $color-accent;
@@ -83,14 +85,49 @@
   }
 
   @include mobile {
+    @include mobile {
+        padding-top: $spacing-sm; 
+        padding-bottom: $spacing-md;
+        padding-left: $spacing-sm;
+        padding-right: $spacing-sm;
+    }
+    
     &__container {
-      flex-direction: column;
-      gap: $spacing-md;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        'logo  links'
+        'info  links'
+        'copy  copy';
+      row-gap: $spacing-md;
+      text-align: left;
+    }
+
+    &__left {
+      display: contents;
+    }
+
+    &__logo {
+      grid-area: logo;
+      margin-top: $spacing-sm;
+    }
+
+    &__info {
+      grid-area: info;
+      margin-top: $spacing-md;
     }
 
     &__right {
-      align-items: center;
+      grid-area: links;
+      align-items: flex-start; // statt flex-end
+      justify-self: end;
+      gap: $spacing-xs;
+    }
+
+    &__center {
+      grid-area: copy;
+      justify-content: center;
+      margin-top: $spacing-sm;
     }
   }
 }
