@@ -12,11 +12,12 @@
     gap: $spacing-xl;
     max-width: 1248px;
     margin: 0 auto;
+    width: 100%;
   }
 
   &__left {
-    width: 568px;
-    height: 337px;
+    width: 100%;
+    max-width: 568px;
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
@@ -37,6 +38,7 @@
     color: $color-accent;
     line-height: 1;
     letter-spacing: -0.02em;
+    word-break: break-word;
   }
 
   &__subtitle {
@@ -65,8 +67,9 @@
   }
 
   &__form {
-    width: 616px;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 616px;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -180,28 +183,22 @@
     }
   }
 
-  &__to-top {
-    position: absolute;
-    bottom: $spacing-lg;
-    right: $spacing-lg;
-    width: 48px;
-    height: 48px;
-    border: 1px solid $color-white;
-    border-radius: 50%;
-    @include flex-center;
-    font-size: 20px;
-    color: $color-white;
-    transition: all $transition-base;
+  @include tablet {
+    &__container {
+      flex-direction: column;
+      gap: $spacing-xl;
+    }
 
-    &:hover {
-      border-color: $color-accent;
-      color: $color-accent;
+    &__left,
+    &__form {
+      width: 100%;
+      max-width: 100%;
     }
   }
 
   @include mobile {
-    padding: $spacing-lg $spacing-sm; 
-    
+    padding: $spacing-lg $spacing-sm;
+
     &__container {
       display: flex;
       flex-direction: column;
@@ -211,22 +208,24 @@
 
     &__left {
       width: 100%;
+      max-width: 100%;
       height: auto;
-      gap: 0; // kein pauschaler gap mehr – Abstände unten gezielt gesetzt
+      gap: $spacing-sm;
     }
 
     &__label {
-      margin-bottom: $spacing-sm; // 16px Label -> Titel
+      margin-bottom: $spacing-sm;
     }
 
     &__title {
-      font-size: 56px;
+      font-size: 36px;
       line-height: 1.1;
-      margin-bottom: $spacing-md; // 32px Titel -> "Got a problem" Box
+      margin-bottom: $spacing-md;
+      word-break: break-word;
     }
 
     &__subtitle {
-      margin-bottom: $spacing-sm; // 16px Subtitle -> Fließtext
+      margin-bottom: $spacing-sm;
     }
 
     &__text {
@@ -234,55 +233,51 @@
     }
 
     &__cta {
-      margin-top: $spacing-sm; // 16px Text -> CTA-Zeile
+      margin-top: $spacing-sm;
       line-height: 1.4;
     }
 
     &__form {
       width: 100%;
       max-width: 100%;
-      gap: 0;
-      margin-top: $spacing-lg; // 40px Abstand Box -> Formular (border-top zählt mit dazu)
+      flex-shrink: 1;
+      gap: $spacing-md;
+      margin-top: $spacing-lg;
     }
 
     &__field {
-      align-items: center;
+      align-items: flex-start;
     }
 
     &__field-label {
       text-align: left;
       width: 100%;
       display: block;
-      padding-top: $spacing-md; // 32px
+      padding-top: 0;
     }
 
     &__input {
       text-align: left;
       width: 100%;
-      padding-bottom: $spacing-md; // 32px
+      padding-bottom: $spacing-xs;
 
       &--textarea {
         text-align: left;
-        padding-top: $spacing-sm;
+        padding-top: $spacing-xs;
       }
     }
 
     &__privacy {
-      padding-top: $spacing-md; // 32px
-      padding-bottom: $spacing-md; // 32px
-    }
-
-    &__btn {
-      justify-content: center;
+      padding-top: $spacing-xs;
+      padding-bottom: $spacing-xs;
     }
 
     &__submit {
       justify-content: center;
     }
 
-    &__to-top {
-        position: static;
-        margin: $spacing-sm auto 0;
-      }
+    &__btn {
+      justify-content: center;
+    }
   }
 }

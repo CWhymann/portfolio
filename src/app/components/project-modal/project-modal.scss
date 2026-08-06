@@ -147,30 +147,31 @@
   }
 
   @include mobile {
-    width: 100%;
-    max-width: 320px;
+    width: 92vw;
+    max-width: 400px;
     height: auto;
-    max-height: 90vh;
+    max-height: 85vh;
     box-sizing: border-box;
     border-radius: 20px;
     overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
-    padding-bottom: $spacing-xl;
-  
+    padding-bottom: $spacing-lg;
+
     &__right {
       position: static;
       width: 100%;
-      height: 220px;
+      height: auto;
+      aspect-ratio: 16 / 10;
       order: -1;
     }
-  
+
     &__image {
       width: 100%;
-      height: 220px;
+      height: 100%;
       border-radius: 20px 20px 0 0;
     }
-  
+
     &__left {
       position: static;
       width: 100%;
@@ -178,34 +179,121 @@
       padding: $spacing-md;
       gap: $spacing-sm;
     }
-  
+
     &__number {
-      font-size: 40px;
+      font-size: 36px;
     }
-  
+
     &__title {
-      font-size: 28px;
+      font-size: 26px;
       margin-top: 0;
     }
-  
+
     &__description {
       font-size: 14px;
     }
-  
+
     &__buttons {
       flex-wrap: wrap;
+      gap: $spacing-xs;
     }
-  
+
     &__close {
       top: $spacing-sm;
       right: $spacing-sm;
     }
-  
+
     &__next {
       position: static;
       display: block;
       margin-top: 0;
       text-align: right;
+    }
+  }
+
+  @include tablet {
+    width: 85vw;
+    max-width: 620px;
+    height: auto;
+    max-height: 85vh;
+    box-sizing: border-box;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+    padding-bottom: $spacing-lg;
+
+    &__right {
+      position: static;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      border-radius: 24px 24px 0 0;
+    }
+
+    &__left {
+      position: static;
+      width: 100%;
+      box-sizing: border-box;
+      padding: $spacing-lg;
+      gap: $spacing-sm;
+    }
+
+    &__number {
+      font-size: 48px;
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    &__next {
+      position: static;
+      display: block;
+      text-align: right;
+      margin-top: $spacing-sm;
+    }
+  }
+
+  @include desktop {
+    width: min(1100px, 92vw);
+    height: auto;
+    min-height: 560px;
+
+    &__left {
+      width: min(480px, 38vw);
+    }
+
+    &__right {
+      left: min(600px, 52vw);
+      width: min(480px, 40vw);
+      height: min(340px, 32vw);
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include wide {
+    width: 1248px;
+    height: 656px;
+
+    &__left {
+      width: 480px;
+    }
+
+    &__right {
+      left: 648px;
+      width: 520px;
+      height: 370px;
     }
   }
 }

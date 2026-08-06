@@ -134,7 +134,31 @@
     }
 
     &__logo-text {
-      font-size: 18px;
+      font-size: 16px;
+    }
+  }
+
+  @include tablet {
+    &__left {
+      display: none;
+    }
+
+    &__hamburger {
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    &__mobile-menu {
+      right: $spacing-sm;
+    }
+
+    &__logo-text {
+      font-size: 20px;
+    }
+
+    &__logo-icon {
+      width: 34px;
+      height: 34px;
     }
   }
 }

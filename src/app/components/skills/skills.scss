@@ -159,4 +159,65 @@
       height: 72px;
     }
   }
+
+  @include tablet {
+    height: auto;
+    padding: $spacing-xl $spacing-md;
+
+    &__container {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+
+    &__box {
+      width: 100%;
+      max-width: 568px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      max-width: 568px;
+      height: auto;
+      gap: $spacing-md;
+    }
+
+    &__icon-item img {
+      width: 72px;
+      height: 80px;
+    }
+  }
+
+  @include desktop {
+    height: auto;
+    padding: $spacing-xl $spacing-md;
+
+    &__container {
+      flex-direction: row;
+    }
+
+    &__box {
+      width: min(500px, 38vw);
+    }
+
+    &__grid {
+      width: min(632px, 45vw);
+      height: auto;
+      gap: clamp(24px, 4vw, 72px);
+    }
+  }
+
+  @include wide {
+    height: 695px;
+
+    &__box {
+      width: 500px;
+    }
+
+    &__grid {
+      width: 632px;
+      height: 428px;
+      gap: 72px;
+    }
+  }
 }

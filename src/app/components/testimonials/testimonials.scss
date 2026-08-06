@@ -55,7 +55,7 @@
 
   &__card-wrapper {
     position: absolute;
-    width: 560px;
+    width: 632px;
     transition: all 0.4s ease;
 
     &--active {
@@ -66,14 +66,14 @@
     }
 
     &--prev {
-      left: calc(50% - 560px - 40px);
+      left: calc(50% - 632px - 40px);
       transform: translateX(-50%);
       opacity: 0.5;
       z-index: 0;
     }
 
     &--next {
-      left: calc(50% + 560px + 40px);
+      left: calc(50% + 632px + 40px);
       transform: translateX(-50%);
       opacity: 0.5;
       z-index: 0;
@@ -81,26 +81,38 @@
   }
 
   &__card {
-    width: 560px;
-    height: 310px;
-    border-radius: 30px;
-    padding: $spacing-lg;
+    width: 632px;
+    height: 248px;
+    border-radius: 32px;
+    padding: 48px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: $color-secondary;
-    border: 1px solid transparent;
+    background: rgba(61, 207, 182, 0.1);
+    border: 1px solid #3dcfb6;
 
     &--active {
+      height: 274px;
+      background: rgba(61, 207, 182, 0.3);
       border-color: #3dcfb6;
     }
   }
 
+  &__card--active &__card-text {
+    color: $color-white;
+  }
+
   &__card-text {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    color: $color-text;
-    line-height: 1.6;
+    font-family: $font-family-heading;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.2;
+    height: 112px;
+    display: -webkit-box;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__card-footer {
@@ -168,12 +180,12 @@
     &__slider {
       width: 100%;
       height: auto;
-      min-height: 460px;
+      min-height: 400px;
       overflow: hidden;
     }
 
     &__card-wrapper {
-      width: calc(100vw - 40px);
+      width: calc(100% - 40px);
       max-width: 358px;
 
       &--active {
@@ -182,23 +194,26 @@
       }
 
       &--prev {
-        left: calc(50% - 100vw);
+        left: calc(50% - 100% - 20px);
         transform: translateX(-50%);
       }
 
       &--next {
-        left: calc(50% + 100vw);
+        left: calc(50% + 100% + 20px);
         transform: translateX(-50%);
       }
     }
 
     &__card {
       width: 100%;
-      height: auto;
-      min-height: 320px;
+      height: 340px;
       border-radius: 32px;
       padding: 30px;
       padding-top: 50px;
+
+      &--active {
+        height: 340px;
+      }
     }
 
     &__quote {
@@ -210,6 +225,9 @@
     &__card-text {
       font-size: 14px;
       line-height: 1.2;
+      height: auto;
+      line-clamp: 6;
+      -webkit-line-clamp: 6;
     }
 
     &__card-footer {
@@ -220,15 +238,70 @@
       z-index: 1;
     }
 
-    &__card-line {
-      flex: 1;
-      height: 1px;
-      background: $color-text-muted;
-    }
-
     &__card-author {
       white-space: nowrap;
       font-size: 12px;
+    }
+  }
+
+  @include tablet {
+    padding: $spacing-xl $spacing-md;
+
+    &__slider {
+      width: 100%;
+      height: auto;
+      min-height: 340px;
+      overflow: hidden;
+    }
+
+    &__card-wrapper {
+      width: min(500px, 70vw);
+
+      &--prev {
+        left: calc(50% - min(500px, 70vw) - 20px);
+      }
+
+      &--next {
+        left: calc(50% + min(500px, 70vw) + 20px);
+      }
+    }
+
+    &__card {
+      width: 100%;
+      height: auto;
+      min-height: 260px;
+      padding: $spacing-md;
+
+      &--active {
+        height: auto;
+        min-height: 280px;
+      }
+    }
+
+    &__card-text {
+      height: auto;
+      line-clamp: 5;
+      -webkit-line-clamp: 5;
+    }
+  }
+
+  @include desktop {
+    &__slider {
+      width: 100%;
+      max-width: $max-width;
+      overflow: hidden;
+    }
+
+    &__card-wrapper {
+      width: min(632px, 45vw);
+
+      &--prev {
+        left: calc(50% - min(632px, 45vw) - 40px);
+      }
+
+      &--next {
+        left: calc(50% + min(632px, 45vw) + 40px);
+      }
     }
   }
 }

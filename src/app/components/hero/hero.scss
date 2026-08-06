@@ -194,6 +194,7 @@
       opacity: 0.6;
     }
   }
+
   @include mobile {
     height: 844px;
 
@@ -215,6 +216,7 @@
       padding: $spacing-xs $spacing-sm;
       white-space: nowrap;
     }
+
     &__scroll {
       top: calc(55% + 100px);
     }
@@ -254,6 +256,73 @@
 
     &__marquee-track span {
       font-size: 18px;
+    }
+  }
+
+  @include tablet {
+    &__role {
+      font-size: 28px;
+    }
+
+    &__name {
+      font-size: 72px;
+      white-space: normal;
+    }
+
+    &__scroll {
+      top: calc(50% + 80px);
+    }
+
+    &__socials {
+      top: calc(50% + 80px);
+    }
+
+    &__social-mail-icon {
+      display: block;
+      width: 22px;
+      height: 22px;
+      margin: 0;
+    }
+
+    &__social-mail-wrap {
+      position: static;
+      margin-bottom: 0;
+    }
+
+    &__social-mail-text {
+      display: none;
+    }
+
+    &__marquee-track span {
+      font-size: 22px;
+    }
+  }
+
+  @include desktop {
+    &__role {
+      font-size: 36px;
+    }
+
+    &__name {
+      font-size: 96px;
+    }
+
+    &__marquee-track span {
+      font-size: 26px;
+    }
+  }
+
+  @include wide {
+    &__role {
+      font-size: 40px;
+    }
+
+    &__name {
+      font-size: 128px;
+    }
+
+    &__marquee-track span {
+      font-size: 32px;
     }
   }
 }
