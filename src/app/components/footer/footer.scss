@@ -1,6 +1,30 @@
 @use '../../../styles/abstracts/variables' as *;
 @use '../../../styles/abstracts/mixins' as *;
 
+@keyframes scroll-line-grow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes button-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba($color-accent, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba($color-accent, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba($color-accent, 0);
+  }
+}
+
 .footer {
   background: $color-primary;
   padding: $spacing-lg $spacing-md;
@@ -77,6 +101,7 @@
     @include flex-center;
     flex-shrink: 0;
     transition: all $transition-base;
+    animation: button-pulse 2s infinite;
 
     &:hover {
       color: $color-accent;
@@ -88,6 +113,10 @@
     width: 1px;
     background: $color-accent;
     margin-top: $spacing-xs;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    animation: scroll-line-grow 1s ease-out forwards;
+    animation-delay: 0.2s;
   }
 
   &__links {
@@ -127,7 +156,7 @@
         'logo  scroll links'
         'info  scroll links'
         'copy  copy   copy';
-      row-gap: $spacing-sm;
+      row-gap: $spacing-md;
       text-align: left;
     }
 
@@ -148,7 +177,7 @@
     &__scroll {
       grid-area: scroll;
       margin-right: 8px;
-      margin-top: 10px;
+      margin-top: -10px;
     }
 
     &__scroll-oval {
@@ -160,7 +189,6 @@
       grid-area: links;
       align-items: flex-start;
       justify-self: start;
-      margin-top: 10px;
     }
 
     &__center {
@@ -196,6 +224,7 @@
 
     &__scroll {
       grid-area: scroll;
+      margin-top: -15px;
     }
 
     &__links {
