@@ -60,16 +60,12 @@
     color: $color-accent;
   }
 
-  &__right {
-    display: flex;
-    align-items: stretch;
-    gap: 8px;
-  }
-
   &__scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: stretch;
+    margin-right: $spacing-md;
   }
 
   &__scroll-oval {
@@ -126,12 +122,12 @@
 
     &__container {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr auto auto;
       grid-template-areas:
-        'logo  links'
-        'info  links'
-        'copy  copy';
-      row-gap: $spacing-md;
+        'logo  scroll links'
+        'info  scroll links'
+        'copy  copy   copy';
+      row-gap: $spacing-sm;
       text-align: left;
     }
 
@@ -141,25 +137,30 @@
 
     &__logo {
       grid-area: logo;
-      margin-top: $spacing-md;
+      margin-top: $spacing-sm;
     }
 
     &__info {
       grid-area: info;
-      margin-top: $spacing-md;
+      margin-top: $spacing-sm;
     }
 
-    &__right {
-      grid-area: links;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-self: end;
-      gap: $spacing-sm;
+    &__scroll {
+      grid-area: scroll;
+      margin-right: 8px;
+      margin-top: 10px;
     }
 
     &__scroll-oval {
       width: 28px;
       height: 40px;
+    }
+
+    &__links {
+      grid-area: links;
+      align-items: flex-start;
+      justify-self: start;
+      margin-top: 10px;
     }
 
     &__center {
@@ -172,11 +173,11 @@
   @include tablet {
     &__container {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr auto auto;
       grid-template-areas:
-        'logo  links'
-        'info  links'
-        'copy  copy';
+        'logo  scroll links'
+        'info  scroll links'
+        'copy  copy   copy';
       row-gap: $spacing-md;
       text-align: left;
     }
@@ -193,10 +194,13 @@
       grid-area: info;
     }
 
-    &__right {
+    &__scroll {
+      grid-area: scroll;
+    }
+
+    &__links {
       grid-area: links;
-      align-items: center;
-      justify-self: end;
+      justify-self: start;
     }
 
     &__center {
