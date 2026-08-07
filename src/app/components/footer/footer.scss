@@ -238,4 +238,44 @@
       margin-top: $spacing-sm;
     }
   }
+  @include desktop {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas:
+        'logo  scroll links'
+        'info  scroll links'
+        'copy  copy   copy';
+      row-gap: $spacing-md;
+      text-align: left;
+    }
+
+    &__left {
+      display: contents;
+    }
+
+    &__logo {
+      grid-area: logo;
+    }
+
+    &__info {
+      grid-area: info;
+    }
+
+    &__scroll {
+      grid-area: scroll;
+      margin-right: 8px;
+    }
+
+    &__links {
+      grid-area: links;
+      justify-self: start;
+    }
+
+    &__center {
+      grid-area: copy;
+      justify-content: center;
+      margin-top: $spacing-sm;
+    }
+  }
 }

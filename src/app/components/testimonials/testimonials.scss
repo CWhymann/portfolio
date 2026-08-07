@@ -17,7 +17,8 @@
 
   &__slider {
     position: relative;
-    width: 1440px;
+    width: 100%;
+    max-width: $max-width;
     height: 360px;
     overflow: hidden;
     margin: 0 auto;
@@ -45,17 +46,17 @@
 
   &__quote {
     display: block;
-    width: 48px;
+    width: 56px;
     line-height: 0.1;
     position: relative;
-    top: 24px;
-    left: 32px;
+    top: 26px;
+    right: 10px;
     z-index: 1;
   }
 
   &__card-wrapper {
     position: absolute;
-    width: 632px;
+    width: min(632px, 78%);
     transition: all 0.4s ease;
 
     &--active {
@@ -66,14 +67,14 @@
     }
 
     &--prev {
-      left: calc(50% - 632px - 40px);
+      left: calc(50% - min(632px, 78%) - #{$spacing-xl});
       transform: translateX(-50%);
       opacity: 0.5;
       z-index: 0;
     }
 
     &--next {
-      left: calc(50% + 632px + 40px);
+      left: calc(50% + min(632px, 78%) + #{$spacing-xl});
       transform: translateX(-50%);
       opacity: 0.5;
       z-index: 0;
@@ -81,7 +82,7 @@
   }
 
   &__card {
-    width: 632px;
+    width: 100%;
     height: 248px;
     border-radius: 32px;
     padding: 48px 40px;
@@ -140,13 +141,13 @@
     justify-content: center;
     gap: 20px;
     margin-top: $spacing-lg;
-    width: 184px;
+    width: 222px;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__arrow {
-    font-size: 28px;
+    font-size: 36px;
     color: $color-white;
     cursor: pointer;
     transition: color $transition-base;
@@ -157,8 +158,8 @@
   }
 
   &__dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: $color-white;
     cursor: pointer;
@@ -178,41 +179,27 @@
     }
 
     &__slider {
-      width: 100%;
       height: auto;
       min-height: 400px;
-      overflow: hidden;
     }
 
     &__card-wrapper {
-      width: calc(100% - 40px);
-      max-width: 358px;
-
-      &--active {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       &--prev {
-        left: calc(50% - 100% - 20px);
-        transform: translateX(-50%);
+        left: calc(50% - min(632px, 78%) - #{$spacing-xs});
       }
 
       &--next {
-        left: calc(50% + 100% + 20px);
-        transform: translateX(-50%);
+        left: calc(50% + min(632px, 78%) + #{$spacing-xs});
       }
     }
 
     &__card {
-      width: 100%;
-      height: 340px;
-      border-radius: 32px;
+      height: 280px;
       padding: 30px;
       padding-top: 50px;
 
       &--active {
-        height: 340px;
+        height: 280px;
       }
     }
 
@@ -248,33 +235,28 @@
     padding: $spacing-xl $spacing-md;
 
     &__slider {
-      width: 100%;
       height: auto;
       min-height: 340px;
-      overflow: hidden;
     }
 
     &__card-wrapper {
-      width: min(500px, 70vw);
-
       &--prev {
-        left: calc(50% - min(500px, 70vw) - 20px);
+        left: calc(50% - min(632px, 78%) - #{$spacing-sm});
       }
 
       &--next {
-        left: calc(50% + min(500px, 70vw) + 20px);
+        left: calc(50% + min(632px, 78%) + #{$spacing-sm});
       }
     }
 
     &__card {
-      width: 100%;
       height: auto;
       min-height: 260px;
-      padding: $spacing-md;
+      padding: $spacing-sm;
 
       &--active {
         height: auto;
-        min-height: 280px;
+        min-height: 260px;
       }
     }
 
@@ -282,26 +264,6 @@
       height: auto;
       line-clamp: 5;
       -webkit-line-clamp: 5;
-    }
-  }
-
-  @include desktop {
-    &__slider {
-      width: 100%;
-      max-width: $max-width;
-      overflow: hidden;
-    }
-
-    &__card-wrapper {
-      width: min(632px, 45vw);
-
-      &--prev {
-        left: calc(50% - min(632px, 45vw) - 40px);
-      }
-
-      &--next {
-        left: calc(50% + min(632px, 45vw) + 40px);
-      }
     }
   }
 }

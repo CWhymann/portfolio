@@ -11,14 +11,23 @@
       <div class="modal__tech">
         @for (tech of project().techStack; track tech) {
           <div class="modal__tech-item">
+            <span
+              class="modal__tech-icon"
+              [style.mask-image]="'url(' + getTechIcon(tech) + ')'"
+              [style.-webkit-mask-image]="'url(' + getTechIcon(tech) + ')'"
+            ></span>
             <span>{{ tech }}</span>
           </div>
         }
       </div>
 
       <div class="modal__buttons">
-        <a class="modal__btn" [href]="project().githubUrl" target="_blank">GitHub ↗</a>
-        <a class="modal__btn" [href]="project().liveUrl" target="_blank">Live Test ↗</a>
+        <a class="modal__btn" [href]="project().githubUrl" target="_blank">
+          GitHub <span class="modal__btn-arrow">↗</span>
+        </a>
+        <a class="modal__btn" [href]="project().liveUrl" target="_blank">
+          Live Test <span class="modal__btn-arrow">↗</span>
+        </a>
       </div>
     </div>
 
