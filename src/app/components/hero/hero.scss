@@ -157,8 +157,7 @@
     bottom: 40px;
     left: 50%;
     z-index: 2;
-    width: calc(#{$max-width} + 80px);
-    max-width: calc(100% + 80px);
+    width: 100vw;
     transform: translateX(-50%) rotate(-3deg);
     gap: 56px;
     overflow: hidden;
@@ -171,9 +170,9 @@
   &__marquee-track {
     display: flex;
     flex-shrink: 0;
-    gap: 56px;
+    gap: 82px;
     white-space: nowrap;
-    animation: marquee 20s linear infinite;
+    animation: marquee 5s linear infinite;
 
     span {
       color: $color-accent;
@@ -184,15 +183,15 @@
       letter-spacing: 0%;
     }
 
-    &-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     &-dot {
-      opacity: 0.6;
+      opacity: 0.8;
     }
+  }
+
+  &__marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 64px;
   }
 
   @include mobile {
@@ -248,10 +247,6 @@
 
     &__social-mail-text {
       display: none;
-    }
-
-    &__marquee {
-      width: calc(100% + 80px);
     }
 
     &__marquee-track span {
