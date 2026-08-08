@@ -1,83 +1,92 @@
 <section class="contact" id="contact">
-    <div class="contact__container">
-      <div class="contact__left">
-        <span class="contact__label">Contact me</span>
-        <h2 class="contact__title">Let's work together</h2>
-        <h3 class="contact__subtitle">Got a problem to solve?</h3>
-        <p class="contact__text">
-          Encourage people to contact you and describe what role you are interested in. Show that you
-          will add value to their projects through your work.
-        </p>
-        <p class="contact__cta">
-          Need a Frontend developer?
-          <a class="contact__cta-link" href="mailto:your@email.com">Let's talk!</a>
-        </p>
-      </div>
-  
-      <form class="contact__form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-        <div class="contact__field">
-          <label class="contact__field-label" for="name">What's your name?</label>
-          <input
-            class="contact__input"
-            [class.contact__input--error]="isInvalid('name')"
-            id="name"
-            type="text"
-            formControlName="name"
-            placeholder="Your name goes here"
-            autocomplete="off"
-          />
-          @if (isInvalid('name')) {
-            <span class="contact__error">Your name is required</span>
-          }
-        </div>
-  
-        <div class="contact__field">
-          <label class="contact__field-label" for="email">What's your email?</label>
-          <input
-            class="contact__input"
-            [class.contact__input--error]="isInvalid('email')"
-            id="email"
-            type="email"
-            formControlName="email"
-            placeholder="youremail@email.com"
-            autocomplete="off"
-          />
-          @if (isInvalid('email')) {
-            <span class="contact__error">Please enter a valid email</span>
-          }
-        </div>
-  
-        <div class="contact__field">
-          <label class="contact__field-label" for="message">How can I help you?</label>
-          <textarea
-            class="contact__input contact__input--textarea"
-            [class.contact__input--error]="isInvalid('message')"
-            id="message"
-            formControlName="message"
-            placeholder="Hello Christian, I am interested in..."
-            autocomplete="off"
-          ></textarea>
-          @if (isInvalid('message')) {
-            <span class="contact__error">Your message is required</span>
-          }
-        </div>
-  
-        <div class="contact__privacy">
-          <input class="contact__checkbox" id="privacy" type="checkbox" formControlName="privacy" />
-          <label class="contact__privacy-label" for="privacy">
-            I've read the
-            <a class="contact__privacy-link" href="/legal-notice" target="_blank">privacy policy</a>
-            and agree to the processing of my data as outlined.
-          </label>
-        </div>
-  
-        @if (success()) {
-          <p class="contact__success">Your message has been sent successfully!</p>
-        }
-  
-        <div class="contact__submit">
-          <button class="contact__btn" type="submit" [disabled]="form.invalid">Say Hello</button>
-        </div>
-      </form>
+  <div class="contact__container">
+    <div class="contact__left">
+      <span class="contact__label">{{ translation.translate('contact.label') }}</span>
+      <h2 class="contact__title">{{ translation.translate('contact.title') }}</h2>
+      <h3 class="contact__subtitle">{{ translation.translate('contact.subtitle') }}</h3>
+      <p class="contact__text">{{ translation.translate('contact.text') }}</p>
+      <p class="contact__cta">
+        {{ translation.translate('contact.ctaText') }}
+        <a class="contact__cta-link" href="mailto:your@email.com">{{
+          translation.translate('contact.ctaLink')
+        }}</a>
+      </p>
     </div>
-  </section>
+
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div class="contact__field">
+        <label class="contact__field-label" for="name">{{
+          translation.translate('contact.form.nameLabel')
+        }}</label>
+        <input
+          class="contact__input"
+          [class.contact__input--error]="isInvalid('name')"
+          id="name"
+          type="text"
+          formControlName="name"
+          [placeholder]="translation.translate('contact.form.namePlaceholder')"
+          autocomplete="off"
+        />
+        <span class="contact__error" [class.contact__error--visible]="isInvalid('name')">{{
+          translation.translate('contact.form.nameError')
+        }}</span>
+      </div>
+
+      <div class="contact__field">
+        <label class="contact__field-label" for="email">{{
+          translation.translate('contact.form.emailLabel')
+        }}</label>
+        <input
+          class="contact__input"
+          [class.contact__input--error]="isInvalid('email')"
+          id="email"
+          type="email"
+          formControlName="email"
+          [placeholder]="translation.translate('contact.form.emailPlaceholder')"
+          autocomplete="off"
+        />
+        <span class="contact__error" [class.contact__error--visible]="isInvalid('email')">{{
+          translation.translate('contact.form.emailError')
+        }}</span>
+      </div>
+
+      <div class="contact__field">
+        <label class="contact__field-label" for="message">{{
+          translation.translate('contact.form.messageLabel')
+        }}</label>
+        <textarea
+          class="contact__input contact__input--textarea"
+          [class.contact__input--error]="isInvalid('message')"
+          id="message"
+          formControlName="message"
+          [placeholder]="translation.translate('contact.form.messagePlaceholder')"
+          autocomplete="off"
+        ></textarea>
+        <span class="contact__error" [class.contact__error--visible]="isInvalid('message')">{{
+          translation.translate('contact.form.messageError')
+        }}</span>
+      </div>
+
+      <div class="contact__privacy">
+        <input class="contact__checkbox" id="privacy" type="checkbox" formControlName="privacy" />
+        <label class="contact__privacy-label" for="privacy">
+          {{ translation.translate('contact.form.privacyText') }}
+          <a class="contact__privacy-link" routerLink="/legal-notice" target="_blank">{{
+            translation.translate('contact.form.privacyLink')
+          }}</a>
+          {{ translation.translate('contact.form.privacyTextEnd') }}
+        </label>
+      </div>
+
+      <span class="contact__success" [class.contact__success--visible]="success()">{{
+        translation.translate('contact.form.success')
+      }}</span>
+
+      <div class="contact__submit">
+        <button class="contact__btn" type="submit" [disabled]="form.invalid">
+          {{ translation.translate('contact.form.submit') }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

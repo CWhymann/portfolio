@@ -1,0 +1,134 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte"
+  },
+
+  "hero": {
+    "role": "Frontend Developer",
+    "ctaWork": "Meine Arbeit ansehen",
+    "ctaContact": "Kontakt aufnehmen",
+    "marquee": {
+      "basedIn": "Wohnhaft in Borken",
+      "openToWork": "Offen für neue Möglichkeiten",
+      "remote": "Verfügbar für Remote-Arbeit",
+      "role": "Frontend Developer"
+    }
+  },
+
+  "about": {
+    "label": "Wer ich bin",
+    "title": "Über mich",
+    "text": "Hallo, ich bin Christian! Schreibe hier etwas über dich, das mit IT zu tun hat. Warum begeisterst du dich fürs Programmieren? Was ist deine Inspirationsquelle, um deine Programmierkenntnisse zu verbessern?",
+    "highlight1": "Wo bist du ansässig? Wärst du offen für Remote-Arbeit oder einen möglichen Umzug?",
+    "highlight2": "Zeig, dass du aufgeschlossen bist. Bist du begeistert davon, neue Technologien zu lernen und deine Fähigkeiten stetig zu verbessern?",
+    "highlight3": "Eine kurze Beschreibung deines Problemlösungsansatzes. Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst?"
+  },
+
+  "skills": {
+    "label": "Technologien",
+    "title": "Skill Set",
+    "text": "Eine kurze Vorstellung deiner Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeig, wie wichtig es dir ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+    "ctaLabel": "Du brauchst",
+    "ctaHighlight": "eine weitere Fähigkeit?",
+    "ctaText": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "btn": "Kontakt aufnehmen"
+  },
+
+  "projects": {
+    "label": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "text": "Entdecke hier eine Auswahl meiner Arbeiten - interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "items": {
+      "join": {
+        "description": "Ein Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Nutzer und Kategorien zu."
+      },
+      "elPolloLoco": {
+        "description": "Ein Jump-and-Run-Spiel mit Wurf-Mechanik, objektorientiert umgesetzt. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
+      },
+      "daBubble": {
+        "description": "Diese App ist ein Slack-Klon. Sie revolutioniert Team-Kommunikation und Zusammenarbeit mit einer intuitiven Oberfläche, Echtzeit-Nachrichten und robuster Kanal-Organisation."
+      }
+    }
+  },
+
+  "projectModal": {
+    "aboutTitle": "Worum geht es in diesem Projekt?",
+    "github": "GitHub",
+    "liveTest": "Live-Test",
+    "next": "Nächstes Projekt"
+  },
+
+  "testimonials": {
+    "title": "Was meine Kollegen über mich sagen",
+    "items": {
+      "0": {
+        "text": "Die Zusammenarbeit mit Christian war für mich enorm gewinnbringend. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts."
+      },
+      "1": {
+        "text": "Christian hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts."
+      },
+      "2": {
+        "text": "Ich hatte das Glück, mit Christian in einem aufwendigen Gruppenprojekt an der Developer Akademie zusammenzuarbeiten. Er blieb stets ruhig, gelassen und fokussiert und sorgte dafür, dass unser Team für den Erfolg gerüstet war. Er ist super kompetent, angenehm in der Zusammenarbeit, und ich würde jederzeit wieder mit ihm arbeiten."
+      }
+    }
+  },
+
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "text": "Motiviere Personen dazu, dich zu kontaktieren, und beschreibe, an welcher Rolle du interessiert bist. Zeig, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffst.",
+    "ctaText": "Brauchst du einen Frontend-Entwickler?",
+    "ctaLink": "Lass uns reden!",
+    "form": {
+      "nameLabel": "Wie heißt du?",
+      "namePlaceholder": "Dein Name hier",
+      "nameError": "Dein Name wird benötigt",
+      "emailLabel": "Wie lautet deine E-Mail?",
+      "emailPlaceholder": "deineemail@email.com",
+      "emailError": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "messageLabel": "Wie kann ich dir helfen?",
+      "messagePlaceholder": "Hallo Christian, ich interessiere mich für...",
+      "messageError": "Deine Nachricht wird benötigt",
+      "privacyText": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyTextEnd": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+      "success": "Deine Nachricht wurde erfolgreich gesendet!",
+      "submit": "Hallo sagen"
+    }
+  },
+
+  "footer": {
+    "role": "Web-Entwickler",
+    "location": "Borken Deutschland",
+    "copyright": "© Christian Wiemann 2025",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail",
+    "legalNotice": "Impressum"
+  },
+
+  "legalNotice": {
+    "title": "Impressum",
+    "imprintHeading": "Impressum",
+    "boardHeading": "Das Team",
+    "emailLabel": "E-Mail",
+    "acceptanceHeading": "Annahme der Bedingungen",
+    "acceptanceText": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennst du die folgenden Nutzungsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die dir von Zeit zu Zeit vorgelegt werden. Wir, die aufgeführten Studierenden, können die Nutzungsbedingungen von Zeit zu Zeit ohne Vorankündigung aktualisieren oder ändern.",
+    "scopeHeading": "Umfang und Eigentum des Produkts",
+    "scopeText1": "Portfolio wurde im Rahmen eines Gruppenprojekts von Studierenden in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für den umfangreichen privaten oder geschäftlichen Einsatz vorgesehen. Daher können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte dieses Produkts garantieren.",
+    "scopeText2": "Das Design von Portfolio gehört der Developer Akademie GmbH. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachbildung des Designs ist strengstens untersagt.",
+    "rightsHeading": "Eigentumsrechte",
+    "rightsText": "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.",
+    "useHeading": "Nutzung des Produkts",
+    "useText": "Portfolio ist ausschließlich für rechtmäßige Zwecke im Einklang mit allen geltenden Gesetzen und Vorschriften bestimmt. Jede Nutzung von Portfolio für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung einer anderen Person ist strengstens untersagt. Du bist allein verantwortlich für deine Interaktionen mit anderen Nutzern von Portfolio.",
+    "disclaimerHeading": "Haftungsausschluss und Haftungsbeschränkung",
+    "disclaimerText": "Portfolio wird \"wie besehen\" ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden, oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangenen Gewinn, Goodwill, Nutzung, Daten oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder im Zusammenhang mit der Nutzung oder Leistung von Portfolio ergeben.",
+    "indemnityHeading": "Freistellung",
+    "indemnityText1": "Du erklärst dich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen und schadlos zu halten, die sich aus oder im Zusammenhang mit deiner Nutzung von Portfolio und/oder deinem Verstoß gegen dieses Impressum ergeben.",
+    "indemnityText2": "Bei Fragen oder Mitteilungen kontaktiere uns bitte unter cwiemann39@gmail.com.",
+    "date": "Stand: 26. Juli 2025"
+  }
+}

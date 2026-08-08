@@ -6,13 +6,13 @@
         <span class="footer__logo-text">Christian<br />Wiemann</span>
       </div>
       <div class="footer__info">
-        <span>Web Developer</span>
-        <span>Borken Germany</span>
+        <span>{{ translation.translate('footer.role') }}</span>
+        <span>{{ translation.translate('footer.location') }}</span>
       </div>
     </div>
 
     <div class="footer__center">
-      <span class="footer__copy">© Christian Wiemann 2025</span>
+      <span class="footer__copy">{{ translation.translate('footer.copyright') }}</span>
     </div>
 
     <div class="footer__scroll">
@@ -21,12 +21,18 @@
     </div>
 
     <div class="footer__links">
-      <a class="footer__link" href="https://github.com/CWhymann" target="_blank">Github</a>
-      <a class="footer__link" href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a class="footer__link" href="mailto:your@email.com">Email</a>
-      <a class="footer__link" routerLink="/legal-notice" routerLinkActive="footer__link--active"
-        >Legal Notice</a
-      >
+      <a class="footer__link" href="https://github.com/CWhymann" target="_blank">{{
+        translation.translate('footer.github')
+      }}</a>
+      <a class="footer__link" href="https://linkedin.com" target="_blank">{{
+        translation.translate('footer.linkedin')
+      }}</a>
+      <a class="footer__link" href="mailto:cwiemann39@gmail.com">{{
+        translation.translate('footer.email')
+      }}</a>
+      <a class="footer__link" routerLink="/legal-notice" routerLinkActive="footer__link--active">{{
+        translation.translate('footer.legalNotice')
+      }}</a>
     </div>
   </div>
 </footer>

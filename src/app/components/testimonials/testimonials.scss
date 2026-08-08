@@ -85,7 +85,7 @@
     width: 100%;
     height: 248px;
     border-radius: 32px;
-    padding: 48px 40px;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -107,13 +107,12 @@
     font-family: $font-family-heading;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.2;
+    line-height: 1.1;
     height: 112px;
     display: -webkit-box;
     line-clamp: 5;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   &__card-footer {
@@ -126,6 +125,7 @@
     flex: 1;
     height: 1px;
     background: $color-text-muted;
+    margin-top: 16px;
   }
 
   &__card-author {
@@ -133,6 +133,7 @@
     font-size: $font-size-sm;
     color: $color-text;
     white-space: nowrap;
+    margin-top: 16px;
   }
 
   &__nav {

@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
+import { Translation } from '../../core/translation';
 
 interface Testimonial {
-  text: string;
+  key: string;
   author: string;
   role: string;
 }
@@ -15,17 +16,17 @@ interface Testimonial {
 export class Testimonials {
   testimonials: Testimonial[] = [
     {
-      text: 'I benefited enormously from working with Paul. His technical skills and proactive approach were crucial to the success of our project.',
+      key: '0',
       author: 'T.Schulz',
       role: 'Frontend Developer',
     },
     {
-      text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
+      key: '1',
       author: 'H.Janisch',
       role: 'Team Partner',
     },
     {
-      text: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
+      key: '2',
       author: 'A. Fischer',
       role: 'Team Partner',
     },
@@ -34,6 +35,8 @@ export class Testimonials {
   activeIndex = signal(1);
   displayIndex = signal(1);
   cardClickCount = signal(0);
+
+  constructor(public translation: Translation) {}
 
   prev(): void {
     this.cardClickCount.set(0);

@@ -1,11 +1,11 @@
 <section class="testimonials">
-  <h2 class="testimonials__title">What my colleagues say about me</h2>
+  <h2 class="testimonials__title">{{ translation.translate('testimonials.title') }}</h2>
 
   <div class="testimonials__slider">
     <div class="testimonials__fade"></div>
 
     <div class="testimonials__track">
-      @for (testimonial of testimonials; track testimonial.author; let i = $index) {
+      @for (testimonial of testimonials; track testimonial.key; let i = $index) {
         <div
           class="testimonials__card-wrapper"
           [class]="'testimonials__card-wrapper--' + getPosition(i)"
@@ -14,7 +14,13 @@
           <img class="testimonials__quote" src="icons/quotes.svg" alt="" />
           <div class="testimonials__card" [class]="'testimonials__card--' + getPosition(i)">
             @if (getPosition(i) === 'active') {
-              <p class="testimonials__card-text">{{ testimonials[displayIndex()].text }}</p>
+              <p class="testimonials__card-text">
+                {{
+                  translation.translate(
+                    'testimonials.items.' + testimonials[displayIndex()].key + '.text'
+                  )
+                }}
+              </p>
               <div class="testimonials__card-footer">
                 <span class="testimonials__card-line"></span>
                 <span class="testimonials__card-author"
@@ -23,7 +29,9 @@
                 >
               </div>
             } @else {
-              <p class="testimonials__card-text">{{ testimonial.text }}</p>
+              <p class="testimonials__card-text">
+                {{ translation.translate('testimonials.items.' + testimonial.key + '.text') }}
+              </p>
               <div class="testimonials__card-footer">
                 <span class="testimonials__card-line"></span>
                 <span class="testimonials__card-author"
@@ -39,7 +47,7 @@
 
   <div class="testimonials__nav">
     <button class="testimonials__arrow" (click)="prev()">←</button>
-    @for (testimonial of testimonials; track testimonial.author; let i = $index) {
+    @for (testimonial of testimonials; track testimonial.key; let i = $index) {
       <button
         class="testimonials__dot"
         [class.testimonials__dot--active]="displayIndex() === i"

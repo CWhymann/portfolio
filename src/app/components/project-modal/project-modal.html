@@ -1,12 +1,31 @@
 <div class="modal-overlay" (click)="onClose()">
   <div class="modal" (click)="$event.stopPropagation()">
+    <div class="modal__lang">
+      <button
+        class="modal__lang-btn"
+        [class.modal__lang-btn--active]="translation.currentLang() === 'en'"
+        (click)="translation.setLanguage('en')"
+      >
+        EN
+      </button>
+      <button
+        class="modal__lang-btn"
+        [class.modal__lang-btn--active]="translation.currentLang() === 'de'"
+        (click)="translation.setLanguage('de')"
+      >
+        DE
+      </button>
+    </div>
+
     <button class="modal__close" (click)="onClose()">✕</button>
 
     <div class="modal__left">
       <span class="modal__number">{{ project().number }}</span>
       <h2 class="modal__title">{{ project().title }}</h2>
-      <h3 class="modal__subtitle">What is this project about?</h3>
-      <p class="modal__description">{{ project().description }}</p>
+      <h3 class="modal__subtitle">{{ translation.translate('projectModal.aboutTitle') }}</h3>
+      <p class="modal__description">
+        {{ translation.translate('projects.items.' + project().key + '.description') }}
+      </p>
 
       <div class="modal__tech">
         @for (tech of project().techStack; track tech) {
@@ -23,10 +42,11 @@
 
       <div class="modal__buttons">
         <a class="modal__btn" [href]="project().githubUrl" target="_blank">
-          GitHub <span class="modal__btn-arrow">↗</span>
+          {{ translation.translate('projectModal.github') }} <span class="modal__btn-arrow">↗</span>
         </a>
         <a class="modal__btn" [href]="project().liveUrl" target="_blank">
-          Live Test <span class="modal__btn-arrow">↗</span>
+          {{ translation.translate('projectModal.liveTest') }}
+          <span class="modal__btn-arrow">↗</span>
         </a>
       </div>
     </div>
@@ -35,6 +55,8 @@
       <img class="modal__image" [src]="project().previewImage" [alt]="project().title" />
     </div>
 
-    <button class="modal__next" (click)="onNext()">Next project →</button>
+    <button class="modal__next" (click)="onNext()">
+      {{ translation.translate('projectModal.next') }} →
+    </button>
   </div>
 </div>

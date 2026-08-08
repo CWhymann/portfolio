@@ -1,5 +1,6 @@
 import { Component, input, output } from '@angular/core';
 import { Project } from '../projects/projects';
+import { Translation } from '../../core/translation';
 
 @Component({
   selector: 'app-project-modal',
@@ -13,13 +14,15 @@ export class ProjectModal {
   next = output<void>();
 
   private techIcons: Record<string, string> = {
-    CSS: '/icons/css.svg',
-    HTML: '/icons/HTML.svg',
-    Firebase: '/icons/Firebase.svg',
-    Angular: '/icons/Angular.svg',
-    TypeScript: '/icons/TypeScript.svg',
-    JavaScript: '/icons/JavaScript.svg',
+    CSS: 'icons/css.on.svg',
+    HTML: 'icons/html.on.svg',
+    Supabase: 'icons/supabase.on.svg',
+    Angular: 'icons/angular.on.svg',
+    TypeScript: 'icons/ts.on.svg',
+    JavaScript: 'icons/js.on.svg',
   };
+
+  constructor(public translation: Translation) {}
 
   onClose(): void {
     this.closed.emit();
@@ -30,6 +33,6 @@ export class ProjectModal {
   }
 
   getTechIcon(tech: string): string {
-    return this.techIcons[tech] ?? '/icons/Rest-Api.svg';
+    return this.techIcons[tech] ?? 'icons/Rest-Api.svg';
   }
 }

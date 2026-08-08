@@ -9,6 +9,12 @@
   z-index: 100;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
 
+  &__lang--mobile {
+    align-self: center;
+    margin-right: 0;
+    margin-top: $spacing-xs;
+  }
+
   &__nav {
     display: flex;
     align-items: center;
@@ -129,12 +135,31 @@
       flex-shrink: 0;
     }
 
-    &__mobile-menu {
-      right: $spacing-sm;
-    }
-
     &__logo-text {
       font-size: 16px;
+    }
+
+    &__mobile-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-md;
+      position: absolute;
+      top: 70px;
+      right: $spacing-md;
+      width: 200px;
+      padding: $spacing-md;
+      border-radius: 24px;
+      background: $gradient-header;
+      border: 1px solid $color-accent;
+
+      &--open {
+        display: flex;
+      }
+
+      .header__link {
+        text-align: center;
+      }
     }
   }
 
@@ -159,6 +184,12 @@
     &__logo-icon {
       width: 34px;
       height: 34px;
+    }
+  }
+
+  @include desktop {
+    &__mobile-menu {
+      display: none;
     }
   }
 }

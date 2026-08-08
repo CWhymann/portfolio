@@ -20,6 +20,34 @@
   align-items: flex-start;
   overflow: hidden;
 
+  &__lang {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2px;
+    z-index: 1;
+  }
+
+  &__lang-btn {
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &--active {
+      background: $color-accent;
+      color: $color-white;
+    }
+  }
+
   &__close {
     position: absolute;
     top: 32px;
@@ -94,9 +122,15 @@
   }
 
   &__tech-icon {
+    display: inline-block;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
+    background-color: $color-accent;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
   }
 
   &__buttons {
@@ -166,6 +200,11 @@
     align-items: stretch;
     padding: 56px $spacing-sm $spacing-md;
     gap: $spacing-md;
+
+    &__lang {
+      top: $spacing-sm;
+      left: $spacing-sm;
+    }
 
     &__right {
       position: static;
@@ -251,6 +290,11 @@
     overflow-y: auto;
     padding: 56px $spacing-md $spacing-lg;
     gap: $spacing-md;
+
+    &__lang {
+      top: $spacing-sm;
+      left: $spacing-sm;
+    }
 
     &__right {
       position: static;

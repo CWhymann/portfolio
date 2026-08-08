@@ -2,12 +2,24 @@
   <nav class="header__nav">
     <div class="header__left">
       <div class="header__lang">
-        <button class="header__lang-btn header__lang-btn--active">EN</button>
-        <button class="header__lang-btn">DE</button>
+        <button
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="translation.currentLang() === 'en'"
+          (click)="setLanguage('en')"
+        >
+          EN
+        </button>
+        <button
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="translation.currentLang() === 'de'"
+          (click)="setLanguage('de')"
+        >
+          DE
+        </button>
       </div>
-      <a class="header__link" href="#about">About me</a>
-      <a class="header__link" href="#skills">Skills</a>
-      <a class="header__link" href="#projects">Projects</a>
+      <a class="header__link" href="#about">{{ translation.translate('header.about') }}</a>
+      <a class="header__link" href="#skills">{{ translation.translate('header.skills') }}</a>
+      <a class="header__link" href="#projects">{{ translation.translate('header.projects') }}</a>
     </div>
 
     <a routerLink="/" class="header__logo">
@@ -28,8 +40,31 @@
   </nav>
 
   <div class="header__mobile-menu" [class.header__mobile-menu--open]="isMenuOpen()">
-    <a class="header__link" href="#about" (click)="toggleMenu()">About me</a>
-    <a class="header__link" href="#skills" (click)="toggleMenu()">Skills</a>
-    <a class="header__link" href="#projects" (click)="toggleMenu()">Projects</a>
+    <a class="header__link" href="#about" (click)="toggleMenu()">{{
+      translation.translate('header.about')
+    }}</a>
+    <a class="header__link" href="#skills" (click)="toggleMenu()">{{
+      translation.translate('header.skills')
+    }}</a>
+    <a class="header__link" href="#projects" (click)="toggleMenu()">{{
+      translation.translate('header.projects')
+    }}</a>
+
+    <div class="header__lang header__lang--mobile">
+      <button
+        class="header__lang-btn"
+        [class.header__lang-btn--active]="translation.currentLang() === 'en'"
+        (click)="setLanguage('en')"
+      >
+        EN
+      </button>
+      <button
+        class="header__lang-btn"
+        [class.header__lang-btn--active]="translation.currentLang() === 'de'"
+        (click)="setLanguage('de')"
+      >
+        DE
+      </button>
+    </div>
   </div>
 </header>

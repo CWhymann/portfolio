@@ -1,22 +1,18 @@
 <section class="skills" id="skills">
   <div class="skills__container">
     <div class="skills__left">
-      <span class="skills__label">Technologies</span>
+      <span class="skills__label">{{ translation.translate('skills.label') }}</span>
       <div class="skills__box">
-        <h2 class="skills__title">Skill Set</h2>
-        <p class="skills__text">
-          A short introduction of your skills. Highlight your experience of using different
-          front-end technologies and emphasise your openness to learning and adapting to new
-          technologies. Show how important it is for you to keep up with the rapid changes in web
-          development.
-        </p>
+        <h2 class="skills__title">{{ translation.translate('skills.title') }}</h2>
+        <p class="skills__text">{{ translation.translate('skills.text') }}</p>
         <p class="skills__cta-label">
-          <strong>You need</strong> <span class="skills__cta-highlight">another skill?</span>
+          <strong>{{ translation.translate('skills.ctaLabel') }}</strong>
+          <span class="skills__cta-highlight">{{
+            translation.translate('skills.ctaHighlight')
+          }}</span>
         </p>
-        <p class="skills__cta-text">
-          Feel free to contact me. I look forward to expanding on my previous knowledge.
-        </p>
-        <a class="skills__btn" href="#contact">Let's Talk</a>
+        <p class="skills__cta-text">{{ translation.translate('skills.ctaText') }}</p>
+        <a class="skills__btn" href="#contact">{{ translation.translate('skills.btn') }}</a>
       </div>
     </div>
 

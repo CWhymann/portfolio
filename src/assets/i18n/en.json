@@ -1,0 +1,129 @@
+{
+  "header": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "hero": {
+    "role": "Frontend Developer",
+    "ctaWork": "Check my work",
+    "ctaContact": "Contact me",
+    "marquee": {
+      "basedIn": "Based in Borken",
+      "openToWork": "Open to work",
+      "remote": "Available for remote work",
+      "role": "Frontend Developer"
+    }
+  },
+  "about": {
+    "label": "Who I Am",
+    "title": "About me",
+    "text": "Hey there, I'm Christian! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "highlight1": "Where are you based? Would you be open to working remotely or potentially relocating?",
+    "highlight2": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+    "highlight3": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution?"
+  },
+  "skills": {
+    "label": "Technologies",
+    "title": "Skill Set",
+    "text": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+    "ctaLabel": "You need",
+    "ctaHighlight": "another skill?",
+    "ctaText": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "btn": "Let's Talk"
+  },
+
+  "projects": {
+    "label": "Portfolio",
+    "title": "Featured Projects",
+    "text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "items": {
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "elPolloLoco": {
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      },
+      "daBubble": {
+        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+      }
+    }
+  },
+
+  "projectModal": {
+    "aboutTitle": "What is this project about?",
+    "github": "GitHub",
+    "liveTest": "Live Test",
+    "next": "Next project"
+  },
+
+  "testimonials": {
+    "title": "What my colleagues say about me",
+    "items": {
+      "0": {
+        "text": "I benefited enormously from working with Christian. His technical skills and proactive approach were crucial to the success of our project."
+      },
+      "1": {
+        "text": "Christian has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project."
+      },
+      "2": {
+        "text": "I had the good fortune of working with Christian in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance."
+      }
+    }
+  },
+
+  "contact": {
+    "label": "Contact me",
+    "title": "Let's work together",
+    "subtitle": "Got a problem to solve?",
+    "text": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "ctaText": "Need a Frontend developer?",
+    "ctaLink": "Let's talk!",
+    "form": {
+      "nameLabel": "What's your name?",
+      "namePlaceholder": "Your name goes here",
+      "nameError": "Your name is required",
+      "emailLabel": "What's your email?",
+      "emailPlaceholder": "youremail@email.com",
+      "emailError": "Please enter a valid email",
+      "messageLabel": "How can I help you?",
+      "messagePlaceholder": "Hello Christian, I am interested in...",
+      "messageError": "Your message is required",
+      "privacyText": "I've read the",
+      "privacyLink": "privacy policy",
+      "privacyTextEnd": "and agree to the processing of my data as outlined.",
+      "success": "Your message has been sent successfully!",
+      "submit": "Say Hello"
+    }
+  },
+  "footer": {
+    "role": "Web Developer",
+    "location": "Borken Germany",
+    "copyright": "© Christian Wiemann 2025",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "legalNotice": "Legal Notice"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "imprintHeading": "Imprint",
+    "boardHeading": "Exploring the Board",
+    "emailLabel": "Email",
+    "acceptanceHeading": "Acceptance of terms",
+    "acceptanceText": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    "scopeHeading": "Scope and ownership of the product",
+    "scopeText1": "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    "scopeText2": "The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "rightsHeading": "Proprietary rights",
+    "rightsText": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
+    "useHeading": "Use of the product",
+    "useText": "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
+    "disclaimerHeading": "Disclaimer of warranties and limitation of liability",
+    "disclaimerText": "Portfolio is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.",
+    "indemnityHeading": "Indemnity",
+    "indemnityText1": "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
+    "indemnityText2": "For any questions or notices, please contact us at cwiemann39@gmail.com.",
+    "date": "Date: July 26, 2025"
+  }
+}

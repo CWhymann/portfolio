@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Translation } from '../../core/translation';
 
 @Component({
   selector: 'app-hero',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero {}
+export class Hero {
+  constructor(public translation: Translation) {}
+}
