@@ -31,12 +31,29 @@ export class Contact {
     return !!(control && control.invalid && control.touched);
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     this.submitted.set(true);
+
     if (this.form.valid) {
-      this.success.set(true);
-      this.form.reset();
-      this.submitted.set(false);
+      const formData = new FormData();
+
+      formData.append('access_key', '07d6dcc3-6c33-4ae9-8139-e6195c679dc8');
+      formData.append('name', this.form.value.name);
+      formData.append('email', this.form.value.email);
+      formData.append('message', this.form.value.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        this.success.set(true);
+        this.form.reset();
+        this.submitted.set(false);
+      }
     }
   }
 }
