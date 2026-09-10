@@ -35,7 +35,7 @@ export class Projects {
       key: 'elPolloLoco',
       techStack: ['JavaScript', 'HTML', 'CSS'],
       githubUrl: 'https://github.com/CWhymann/el-pollo-loco',
-      liveUrl: 'https://example.com/el-pollo-loco',
+      liveUrl: 'https://cwhymann.github.io/el-pollo-loco/',
       previewImage: 'img/el-pollo-loco-preview.png',
     },
     {
