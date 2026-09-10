@@ -26,7 +26,7 @@ export class Projects {
       key: 'join',
       techStack: ['CSS', 'HTML', 'Supabase', 'Angular', 'TypeScript'],
       githubUrl: 'https://github.com/CWhymann/join',
-      liveUrl: 'https://example.com/join',
+      liveUrl: 'https://cwhymann.github.io/join/',
       previewImage: 'img/join-preview.png',
     },
     {
