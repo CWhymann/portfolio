@@ -31,8 +31,10 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --base-href=/portfolio/
 
-      - name: Setup Pages
+          - name:Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
