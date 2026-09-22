@@ -38,15 +38,6 @@ export class Projects {
       liveUrl: 'https://cwhymann.github.io/el-pollo-loco/',
       previewImage: 'img/el-pollo-loco-preview.png',
     },
-    {
-      number: '03',
-      title: 'DA Bubble',
-      key: 'daBubble',
-      techStack: ['Angular', 'Supabase', 'TypeScript'],
-      githubUrl: 'https://github.com/CWhymann/da-bubble',
-      liveUrl: 'https://example.com/da-bubble',
-      previewImage: 'img/da-bubble-preview.png',
-    },
   ];
 
   hoveredProject = signal<Project | null>(null);
