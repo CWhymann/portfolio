@@ -47,6 +47,15 @@ export class Projects {
       liveUrl: 'https://cwhymann.github.io/dabubble/',
       previewImage: 'img/da-bubble-preview.png',
     },
+    {
+      number: '04',
+      title: 'Magnificent Seven',
+      key: 'magnificentSeven',
+      techStack: ['Vue 3', 'TypeScript', 'Vite', 'Tailwind CSS', 'chart.js'],
+      githubUrl: 'https://github.com/CWhymann/magnificent-seven-dashboard',
+      liveUrl: 'https://cwhymann.github.io/magnificent-seven-dashboard/',
+      previewImage: 'img/magnificent-seven-preview.svg',
+    },
   ];
 
   hoveredProject = signal<Project | null>(null);
