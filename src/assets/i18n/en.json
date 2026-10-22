@@ -18,15 +18,15 @@
   "about": {
     "label": "Who I Am",
     "title": "About me",
-    "text": "Hey there, I'm Christian! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    "highlight1": "Where are you based? Would you be open to working remotely or potentially relocating?",
-    "highlight2": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
-    "highlight3": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution?"
+    "text": "Hey there, I'm Christian! After working as a digital and print media designer and as an integration coach and lecturer, I have been training as a software developer at the Developer Akademie since March 2026, focusing on web applications including backend development. I enjoy turning a design into a working application.",
+    "highlight1": "Based in Borken and open to remote work.",
+    "highlight2": "I enjoy learning new technologies and keep improving my skills.",
+    "highlight3": "I approach problems step by step and learn from every challenge."
   },
   "skills": {
     "label": "Technologies",
     "title": "Skill Set",
-    "text": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+    "text": "My focus is on the frontend with HTML, CSS, JavaScript, TypeScript and Angular, plus Supabase as backend. I keep up with the rapid changes in web development and am open to learning new technologies.",
     "ctaLabel": "You need",
     "ctaHighlight": "another skill?",
     "ctaText": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
@@ -76,7 +76,7 @@
     "label": "Contact me",
     "title": "Let's work together",
     "subtitle": "Got a problem to solve?",
-    "text": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "text": "Looking for a frontend developer, or do you have a project I can support? Write to me, I look forward to your message.",
     "ctaText": "Need a Frontend developer?",
     "ctaLink": "Let's talk!",
     "form": {

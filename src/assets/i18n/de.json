@@ -20,16 +20,16 @@
   "about": {
     "label": "Wer ich bin",
     "title": "Über mich",
-    "text": "Hallo, ich bin Christian! Schreibe hier etwas über dich, das mit IT zu tun hat. Warum begeisterst du dich fürs Programmieren? Was ist deine Inspirationsquelle, um deine Programmierkenntnisse zu verbessern?",
-    "highlight1": "Wo bist du ansässig? Wärst du offen für Remote-Arbeit oder einen möglichen Umzug?",
-    "highlight2": "Zeig, dass du aufgeschlossen bist. Bist du begeistert davon, neue Technologien zu lernen und deine Fähigkeiten stetig zu verbessern?",
-    "highlight3": "Eine kurze Beschreibung deines Problemlösungsansatzes. Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst?"
+    "text": "Hallo, ich bin Christian! Nach meiner Zeit als Mediengestalter Digital und Print sowie als Integrationscoach und Dozent bilde ich mich seit März 2026 an der Developer Akademie zum Softwareentwickler weiter, mit Schwerpunkt auf Web-Anwendungen inklusive Backend-Entwicklung. Mich begeistert es, aus einem Design eine funktionierende Anwendung zu bauen.",
+    "highlight1": "Wohnhaft in Borken und offen für Remote-Arbeit.",
+    "highlight2": "Ich lerne gern neue Technologien und entwickle meine Fähigkeiten stetig weiter.",
+    "highlight3": "Ich gehe Probleme Schritt für Schritt an und lerne aus jeder Herausforderung."
   },
 
   "skills": {
     "label": "Technologien",
     "title": "Skill Set",
-    "text": "Eine kurze Vorstellung deiner Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeig, wie wichtig es dir ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+    "text": "Mein Schwerpunkt liegt auf dem Frontend mit HTML, CSS, JavaScript, TypeScript und Angular, dazu kommt Supabase als Backend. Ich halte mich mit den schnellen Veränderungen in der Webentwicklung auf dem Laufenden und bin offen dafür, neue Technologien zu lernen.",
     "ctaLabel": "Du brauchst",
     "ctaHighlight": "eine weitere Fähigkeit?",
     "ctaText": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
@@ -79,7 +79,7 @@
     "label": "Kontakt",
     "title": "Lass uns zusammenarbeiten",
     "subtitle": "Hast du ein Problem zu lösen?",
-    "text": "Motiviere Personen dazu, dich zu kontaktieren, und beschreibe, an welcher Rolle du interessiert bist. Zeig, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffst.",
+    "text": "Du suchst einen Frontend-Entwickler oder hast ein Projekt, bei dem ich unterstützen kann? Schreib mir, ich freue mich auf deine Nachricht.",
     "ctaText": "Brauchst du einen Frontend-Entwickler?",
     "ctaLink": "Lass uns reden!",
     "form": {
